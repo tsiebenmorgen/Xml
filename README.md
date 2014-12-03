@@ -1,7 +1,7 @@
-XmlFile
+Xml
 =======
 
-Die XmlFile-Klasse ist eine Fassade für die DOM-Erweiterung von PHP. Sie stellt eine vereinfachte Schnittstelle
+Die Xml-Klasse ist eine Fassade für die DOM-Erweiterung von PHP. Sie stellt eine vereinfachte Schnittstelle
 bereit, um aus XML-Dateien oder XML-Code über XPath-Queries Attributewerte und Tagcontent auszulesen oder direkt
 auf DOMElement-Objekte zuzugreifen.
 
@@ -25,15 +25,15 @@ if ($nodeList instanceof DOMNodeList) {
 }
 ```
 <br/>
-__Beispiel, um mit der XmlFile-Klasse einen Attributwert zu ermitteln:__
+__Beispiel, um mit der Xml-Klasse einen Attributwert zu ermitteln:__
 
 ```php
 
-require_once '/path/to/xml/file/class';
+require_once '/path/to/xml/class';
 
-use de\webomotion\XmlFile;
+use de\webomotion\Xml;
 
-$xml   = new XmlFile('/path/to/file');
+$xml   = new Xml('/path/to/file');
 $value = $xml->get('/xpath/to/node/attribute::name');
 ```
 <br/>
@@ -69,6 +69,5 @@ __HINWEISE:__
 
 TODO:
 =====
-* Zeichenketten statt Files als Input
 * DOM modifizieren
 * Umgang mit namespaces
