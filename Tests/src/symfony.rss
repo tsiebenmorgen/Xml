@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+    <channel>
+        <title>Symfony Blog</title>
+
+        <link>http://symfony.com/blog/</link>
+        <description>Most recent posts published on the Symfony project blog</description>
+        <pubDate>Thu, 04 Dec 2014 07:57:16 +0000</pubDate>
+        <lastBuildDate>Wed, 03 Dec 2014 17:19:00 +0000</lastBuildDate>
+        <language>en</language>
+                <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/symfony/blog" /><feedburner:info uri="symfony/blog" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><feedburner:browserFriendly>This is an XML content feed. It is intended to be viewed in a newsreader or syndicated to another site, subject to copyright and fair use.</feedburner:browserFriendly><item>
+            <title><![CDATA[ Symfony 2.6.1 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/tnzR3-xXVnA/symfony-2-6-1-released</link>
+            <description>&lt;p&gt;Symfony 2.6.1 has just been released.&lt;/p&gt;
+&lt;p&gt;Symfony 2.6.0 was released recently but we've decided to make a new release as
+it contains several regressions.&lt;/p&gt;
+&lt;p&gt;The two regressions that were fixed are the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12811"&gt;#12811&lt;/a&gt; Configure firewall's kernel exception listener with configured entry point or a default entry point (rjkip)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12716"&gt;#12716&lt;/a&gt; [ClassLoader] define constant only if it wasn't defined before (xabbuh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This release is also the first one that does not have absolute paths in the
+production cache thanks to this fix:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12784"&gt;#12784&lt;/a&gt; [DependencyInjection] make paths relative to __DIR__ in the generated container (nicolas-grekas)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a list of the other important changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12770"&gt;#12770&lt;/a&gt; [Filesystem] fix lock file permissions (nicolas-grekas)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/tnzR3-xXVnA" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-6-1-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Wed, 03 Dec 2014 17:19:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-6-1-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-6-1-released</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Symfony 2.5.8 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/RM9l7j9A6NU/symfony-2-5-8-released</link>
+            <description>&lt;p&gt;Symfony 2.5.8 has just been released.&lt;/p&gt;
+&lt;p&gt;Symfony 2.5.7 was released recently but we've decided to make a new release as
+it contains several regressions.&lt;/p&gt;
+&lt;p&gt;The two regressions that were fixed are the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12811"&gt;#12811&lt;/a&gt; Configure firewall's kernel exception listener with configured entry point or a default entry point (rjkip)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12716"&gt;#12716&lt;/a&gt; [ClassLoader] define constant only if it wasn't defined before (xabbuh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This release is also the first one that does not have absolute paths in the
+production cache thanks to this fix:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12784"&gt;#12784&lt;/a&gt; [DependencyInjection] make paths relative to __DIR__ in the generated container (nicolas-grekas)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a list of the other important changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12553"&gt;#12553&lt;/a&gt; [Debug] fix error message on double exception (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12550"&gt;#12550&lt;/a&gt; [FrameworkBundle] backport &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12489"&gt;#12489&lt;/a&gt; (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12570"&gt;#12570&lt;/a&gt; Fix initialized() with aliased services (Daniel Wehner)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12267"&gt;#12267&lt;/a&gt; [Form][WebProfiler] Empty form names fix (kix)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12137"&gt;#12137&lt;/a&gt; [FrameworkBundle] cache:clear command fills php.meta files with wrong data (Strate)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/RM9l7j9A6NU" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-5-8-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Wed, 03 Dec 2014 16:37:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-5-8-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-5-8-released</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Ryan Weaver named 10th Symfony Core Team Member ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/xU9m8rlXqFc/ryan-weaver-named-10th-symfony-core-team-member</link>
+            <description>&lt;p&gt;&lt;a class="reference external" href="https://connect.sensiolabs.com/profile/weaverryan"&gt;Ryan Weaver&lt;/a&gt;, one of our favorite fellows in the Symfony Community, has been
+promoted as member of the &lt;a class="reference external" href="http://symfony.com/doc/current/contributing/code/core_team.html"&gt;Symfony Core Team&lt;/a&gt;. The announcement, which was a
+complete surprise even for Ryan, was made during the closing session of the
+recent SymfonyCon conference in Madrid.&lt;/p&gt;
+&lt;p&gt;The Symfony Core Team is a group of developers that ultimately decides which code
+gets merged into the Symfony repositories. As its 10th member, Ryan joins the
+group of &lt;em&gt;deciders&lt;/em&gt;, whose opinions are considered for accepting or rejecting
+pull requests.&lt;/p&gt;
+&lt;p&gt;Ryan is well known for his &lt;a class="reference external" href="http://symfony.com/contributors/doc"&gt;contributions to Symfony documentation&lt;/a&gt;, for his
+screencasts published by &lt;a class="reference external" href="https://knpuniversity.com/"&gt;KnpUniversity&lt;/a&gt; and for having initiated the
+&lt;a class="reference external" href="http://symfony.com/blog/making-the-symfony-experience-exceptional"&gt;DX initiative&lt;/a&gt;, which has profoundly transformed the developer experience
+when using Symfony.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/xU9m8rlXqFc" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/ryan-weaver-named-10th-symfony-core-team-member</guid>
+            <dc:creator><![CDATA[ Javier Eguiluz ]]></dc:creator>
+            <pubDate>Wed, 03 Dec 2014 14:48:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/ryan-weaver-named-10th-symfony-core-team-member#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/ryan-weaver-named-10th-symfony-core-team-member</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Symfony 2.3.23 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/fOSWkWkbh_w/symfony-2-3-23-released</link>
+            <description>&lt;p&gt;Symfony 2.3.23 has just been released.&lt;/p&gt;
+&lt;p&gt;Symfony 2.3.22 was released recently but we've decided to make a new release as
+it contains several regressions.&lt;/p&gt;
+&lt;p&gt;The two regressions that were fixed are the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12811"&gt;#12811&lt;/a&gt; Configure firewall's kernel exception listener with configured entry point or a default entry point (rjkip)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12716"&gt;#12716&lt;/a&gt; [ClassLoader] define constant only if it wasn't defined before (xabbuh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This release is also the first one that does not have absolute paths in the
+production cache thanks to this fix:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12784"&gt;#12784&lt;/a&gt; [DependencyInjection] make paths relative to __DIR__ in the generated container (nicolas-grekas)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a list of the other important changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12553"&gt;#12553&lt;/a&gt; [Debug] fix error message on double exception (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12550"&gt;#12550&lt;/a&gt; [FrameworkBundle] backport &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12489"&gt;#12489&lt;/a&gt; (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12570"&gt;#12570&lt;/a&gt; Fix initialized() with aliased services (Daniel Wehner)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12137"&gt;#12137&lt;/a&gt; [FrameworkBundle] cache:clear command fills .php.meta files with wrong data (Strate)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/fOSWkWkbh_w" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-3-23-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Wed, 03 Dec 2014 14:14:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-3-23-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-3-23-released</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ A week of symfony #413 (24-&gt;30 November 2014) ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/0VO7Tmlp0Ps/a-week-of-symfony-413-24-30-november-2014</link>
+            <description>&lt;p&gt;This week, the SymfonyCon Madrid Hackday generated a lot of development activity.
+Symfony 2.7 was the main focus of this activity, as it added lots of deprecation
+logs and noticies to ease the transition to the upcoming Symfony 3 version.&lt;/p&gt;
+
+&lt;h2&gt;Symfony2 development highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.3"&gt;2.3 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/0a76b7e9fc2fcc0495312047f83843e041e28cfc"&gt;0a76b7e&lt;/a&gt;:  renamed Symfony2 to Symfony&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/a18b6d17e32a025f67287122d084bb19a4b198e8"&gt;a18b6d1&lt;/a&gt;: &amp;#91;DependencyInjection&amp;#93; fixed initialized() with aliased services&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/1ed7606c3247ad73c1a8dd4a4d2bdfa9158c391f"&gt;1ed7606&lt;/a&gt;: &amp;#91;Debug&amp;#93; fixed error message on double exception&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/388229b55cc3dd2d17f9247ba14b5ae9dfdbe49e"&gt;388229b&lt;/a&gt;: &amp;#91;ClassLoader&amp;#93; define constant only if it wasn't defined before&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.5"&gt;2.5 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/844aa54aa2559a644b1062d544683877266b1579"&gt;844aa54&lt;/a&gt;: &amp;#91;Console&amp;#93; removed deprecated Dialog usage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.6"&gt;2.6 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/d3451fc9388efbe324294f9a8d10fb2b1d56b73f"&gt;d3451fc&lt;/a&gt;: &amp;#91;WebProfilerBundle&amp;#93; removed usage of app.request in search bar template&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/cd55a81df7633a3848680a47a5805889cbf4f122"&gt;cd55a81&lt;/a&gt;:  updated information for the Translation component regarding the new LoggingTranslator class&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/680fe7acb2f40d40d62a558917e894365696acf6"&gt;680fe7a&lt;/a&gt;: &amp;#91;DebugBundle, HttpKernel&amp;#93; avoid using container as dependency for DumpListener&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/b753218ff536749c19dfc3a445766ab0d592836a"&gt;b753218&lt;/a&gt;: &amp;#91;Validator&amp;#93; make DateTime objects represented as strings in the violation message&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.7"&gt;2.7 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/0dfa7d549e095df5cba33bb36b3c891aab79eeb0"&gt;0dfa7d5&lt;/a&gt;:  compare version using PHP_VERSION_ID instead of version_compare()&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/7d9afd72ed0a7371fc96a8639ddef1f383062463"&gt;7d9afd7&lt;/a&gt;: &amp;#91;FrameworkBundle&amp;#93; added deprecation log in FormHelper&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/b9a6b711d37f993cbc18f389c299198889cf98ad"&gt;b9a6b71&lt;/a&gt;: &amp;#91;Process&amp;#93; added deprecation message for Process&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/0b88a23cb85d0c67503ba031b2c64e1d0ac9a994"&gt;0b88a23&lt;/a&gt;: &amp;#91;Stopwatch&amp;#93; added __toString on StopwatchEvent&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/11ba901fec9354912a37731586600819ecfa85c4"&gt;11ba901&lt;/a&gt;, &lt;a href="http://github.com/symfony/symfony/commit/dcc1103a1620855358f2ec76b912b943e15d3e91"&gt;dcc1103&lt;/a&gt;:  adjusted error_reporting to allow deprecation messages for 3.0&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/4b3f135a80f0d0bf1ea9663c36126b471a91830d"&gt;4b3f135&lt;/a&gt;, &lt;a href="http://github.com/symfony/symfony/commit/a00c954c6025eec101863701af903e8a1f679450"&gt;a00c954&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated MetadataInterface and PropertyMetadataInterface&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/881ed1eb618ce82cef78bea1f98328d930086fea"&gt;881ed1e&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated ApcCache&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/a1a4ece91fb4e7e4a367357a8a1a906d2ab3b6aa"&gt;a1a4ece&lt;/a&gt;: &amp;#91;Console&amp;#93; deprecated TableHelper&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/8bbbefe271946076e5a30f3af071c61c47f9cbe2"&gt;8bbbefe&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated ClassBasedInterface&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/1d4565043a0fe34d203e2fec1918b100d1752682"&gt;1d45650&lt;/a&gt;: &amp;#91;Form&amp;#93; added deprecation notice on Form::getErrorsAsString&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/b58109664357089e6fef6a08cb1bffd3e35d22b1"&gt;b581096&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated GlobalExecutionContextInterface&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/a3cfe82b8675578d1e8468005a8fded3ed69106d"&gt;a3cfe82&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated some methods of ConstraintViolation&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/4ef4c2c1e1b6f08aef734a64438ec2505711f283"&gt;4ef4c2c&lt;/a&gt;: &amp;#91;Yaml&amp;#93; added a deprecation note about Yaml::parse() file support&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/963615a1d6ef5d36adcf7f548e0bcfc9a9a90617"&gt;963615a&lt;/a&gt;: &amp;#91;Routing&amp;#93; added deprecated trigger for ApacheMatcherDumper and ApacheUrlMatcher&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/1b42e32f09a2d8803ffa5d78a0bb42e0f7325d3e"&gt;1b42e32&lt;/a&gt;: &amp;#91;OptionsResolver&amp;#93; deprecated OptionsResolverInterface&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/13083106c2fcd70f747d8cfd07a94e6fe0888d7e"&gt;1308310&lt;/a&gt;: &amp;#91;Form&amp;#93; added deprecation note about 'virtual' form option&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/9938179e4489f2484085e0c9f6008b4ab2122ab9"&gt;9938179&lt;/a&gt;: &amp;#91;HttpKernel&amp;#93; added a deprecation note about RegisterListenersPass&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/2e47b6201717966acf495e94cf1d0ad5da91460b"&gt;2e47b62&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated some methods in ValidatorInterface and LegacyValidator&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/705eb961d59c82a5ce80f5753b3508e56386020f"&gt;705eb96&lt;/a&gt;: &amp;#91;PropertyAccess&amp;#93; added deprecation log for PropertyAccess::getPropertyAccessor&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/a93ab3e33eabacbd211de7089f77b784a5de69bb"&gt;a93ab3e&lt;/a&gt;: &amp;#91;Validator&amp;#93; added a deprecation note about PropertyMetadataContainerInterface&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/46f1eb06ff672098459df50808d998cc9362fea4"&gt;46f1eb0&lt;/a&gt;: &amp;#91;Validator&amp;#93; added a deprecation note on Valid constraint validator for deep option&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/64a9701b1bd3fcbd8ade0566bd83085224b9335a"&gt;64a9701&lt;/a&gt;: &amp;#91;FrameworkBundle&amp;#93; added deprecation warning on the base controller getRequest method&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/7ed6d11a23af2f3b2fa37df0b087f054975869e5"&gt;7ed6d11&lt;/a&gt;: &amp;#91;Validator&amp;#93; deprecated ExecutionContextInterface&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/673c25372b6999c739f032e3378a98271144e07c"&gt;673c253&lt;/a&gt;: &amp;#91;Console&amp;#93; added a deprecation note about DialogHelper&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/786e50957fc7e1e5db315ab1285df8d21a323399"&gt;786e509&lt;/a&gt;: &amp;#91;Validator&amp;#93; added a deprecation note about ValidationVisitorInterface and ValidationVisitor&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/ba524b8779f482ca072f9baf7a34577ea96f8c12"&gt;ba524b8&lt;/a&gt;: &amp;#91;DependencyInjection&amp;#93; deprecated some methods in the Definition class&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/5876f520d4595e96016966351fee7bdafb30acc3"&gt;5876f52&lt;/a&gt;: &amp;#91;Debug&amp;#93; added some deprecation notes about Debug component classes&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/07436d7e1539c4e29ea8872c3c5d3c932123a653"&gt;07436d7&lt;/a&gt;: &amp;#91;FrameworkBundle&amp;#93; added a deprecation warning for the command dumper&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/21c32b5923dac55bc91ee0431ca8a8b71308efe1"&gt;21c32b5&lt;/a&gt;: &amp;#91;Validator&amp;#93; added a deprecation note about ElementMetadata&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/f216c819ed68e4aae76940323677a82a85ff4938"&gt;f216c81&lt;/a&gt;: &amp;#91;ClassLoader&amp;#93; added a deprecation note about UniversalClassLoader class&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/5580a4f349a2552fcd02c8b4e36382757440e86d"&gt;5580a4f&lt;/a&gt;: &amp;#91;Locale&amp;#93; added a deprecation note about the Locale component&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/c82dc5e21f3874730045c9bbf0664ee20a02dc0e"&gt;c82dc5e&lt;/a&gt;: &amp;#91;Validator&amp;#93; added a deprecation note about setPropertyAccessor&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/171377df7a20a309b8089021ff24043d0bf88860"&gt;171377d&lt;/a&gt;: &amp;#91;Validator&amp;#93; added a deprecation note about MetadataInterface's accept() method&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/69fa99a6a60bab5901da0cfa82ace4520ab2c1d3"&gt;69fa99a&lt;/a&gt;: &amp;#91;Console&amp;#93; added a deprecation note about ProgressHelper&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/deeb652bf94a07abc6de3e13b6e0ba30fa8de88c"&gt;deeb652&lt;/a&gt;: &amp;#91;Validator&amp;#93; added deprecation log for validate and validateValue on ExecutionContext&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/88b9500c8b6a520632fc54a4a26106f0a86f8953"&gt;88b9500&lt;/a&gt;:  deprecated log methods in the Monolog Bridge and the NullLogger&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/226774966e5f2eda4edc6b6115c8c09574a46bf0"&gt;2267749&lt;/a&gt;: &amp;#91;Form&amp;#93; added warning logs about the deprecation of FormIntegration tests&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/cd0502660d3444692cc94a6a4e2b00e217218a7d"&gt;cd05026&lt;/a&gt;: &amp;#91;Translation&amp;#93; added a deprecation note about Translator's setFallbackLocale&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Newest issues and pull requests&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12561"&gt;[Routing] Duplicate route names silently ignored&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12592"&gt;[DIC] Using the container as a factory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12612"&gt;[DX][VarDumper] expand all items of an array&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12775"&gt;[DX] Removal of Locale component&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12769"&gt;[Console] Ability to use option default only if the option was passed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12744"&gt;[HttpFoundation] Impossible to send a response without Content-type header&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12668"&gt;[DX] Symfony 2.5 installation experiences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12586"&gt;Boolean allowed type in OptionsResolver gives misleading exception&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12582"&gt;[2.6] Var dumper result is not shown in toolbar on not smaller screens&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;SwiftMailer development highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/swiftmailer/swiftmailer/commits/master"&gt;Master changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/swiftmailer/swiftmailer/commit/84ff290871c3436c3703ce15ec5e344da0b59472"&gt;84ff290&lt;/a&gt;:  removed usage of getmypid() which is not always available&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/swiftmailer/swiftmailer/commit/02824ccb4a1cc74ddb3b3f7b2bd8639f08d6b839"&gt;02824cc&lt;/a&gt;:  fixed unit tests when iconv is not available&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/swiftmailer/swiftmailer/commit/3657ef0978b42a8fd22126492d383d486f7f5e3b"&gt;3657ef0&lt;/a&gt;:  fixed autoloading of unit test classes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;They talked about us&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://cmf.symfony.com/news/hackdays-in-wuerzburg"&gt;Symfony CMF Hackdays in Würzburg (12/13 Dec. 2014)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://mmoreram.com/blog/2014/11/25/symfony-walk-ends/"&gt;SymfonyWalk - C'est Fini&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://symfony.es/noticias/2014/11/24/preparate-para-la-mejor-cobertura-de-la-symfonycon/"&gt;Prepárate para la mejor cobertura de la SymfonyCon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://phpmagazin.de/news/zweite-beta-symfony-2-6-0-177658"&gt;Zweite Beta von Symfony 2.6.0 veröffentlicht&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://shout.setfive.com/2014/11/25/symfony2-making-impersonating-a-user-more-friendly/"&gt;Symfony2: Making impersonating a user more friendly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.symfony.gr.jp/symfony2/reference/forms/types.html"&gt;Form Type リファレンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cesarcancino.com/noticias/detalle/videotutorial-11-taller-practico-de-symfony-framework-2-creacion-de-login-con-doctrine"&gt;VideoTutorial 11 Taller Práctico de Symfony Framework 2. Creación de Login con Doctrine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.techtonet.com/symfony-create-a-post-form-with-a-rest-server-2/"&gt;Symfony – Create a post Form with a Rest server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.arithm.com/2014/11/24/validating-multiple-files-in-symfony-2-5/"&gt;Validating multiple files in Symfony 2.5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/0VO7Tmlp0Ps" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/a-week-of-symfony-413-24-30-november-2014</guid>
+            <dc:creator><![CDATA[ Javier Eguiluz ]]></dc:creator>
+            <pubDate>Sun, 30 Nov 2014 20:16:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/a-week-of-symfony-413-24-30-november-2014#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/a-week-of-symfony-413-24-30-november-2014</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Symfony 2.6.0 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/xNo8n18mo68/symfony-2-6-0-released</link>
+            <description>&lt;p&gt;Symfony 2.6.0 has just been released.&lt;/p&gt;
+&lt;p&gt;Symfony 2.6.0 comes with more than &lt;a class="reference external" href="http://symfony.com/blog/symfony-2-6-0-beta1-released"&gt;100 new features and enhancements&lt;/a&gt;. The &lt;a class="reference external" href="https://github.com/symfony/symfony/compare/2.5...v2.6.0-BETA1"&gt;full changelog
+from 2.5 to 2.6&lt;/a&gt; is available
+on the repository.&lt;/p&gt;
+&lt;p&gt;You can read the UPGRADE from 2.5 to 2.6 guide to learn more about new ways of
+doing things and deprecated features that will be removed in 3.0.&lt;/p&gt;
+&lt;p&gt;Here is a list of the changes done since beta2:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12553"&gt;#12553&lt;/a&gt; [Debug] fix error message on double exception (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12550"&gt;#12550&lt;/a&gt; [FrameworkBundle] backport &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12489"&gt;#12489&lt;/a&gt; (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12437"&gt;#12437&lt;/a&gt;  [Validator] make DateTime objects represented as strings in the violation message (hhamon)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12575"&gt;#12575&lt;/a&gt; [WebProfilerBundle] Remove usage of app.request in search bar template (jeromemacias)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12570"&gt;#12570&lt;/a&gt; Fix initialized() with aliased services (Daniel Wehner)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/xNo8n18mo68" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-6-0-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Sat, 29 Nov 2014 10:33:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-6-0-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-6-0-released</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Symfony 2.6.0-BETA2 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/YB95Jdedb58/symfony-2-6-0-beta2-released</link>
+            <description>&lt;p&gt;Symfony 2.6.0-BETA2 has just been released. This is the last version before the 2.6 final release later this week. Here is a list of the most important
+changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12555"&gt;#12555&lt;/a&gt; [Debug] fix ENT_SUBSTITUTE usage (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;feature &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12538"&gt;#12538&lt;/a&gt; [FrameworkBundle] be smarter when guessing the document root (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12539"&gt;#12539&lt;/a&gt; [TwigBundle] properly set request attributes in controller test (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12267"&gt;#12267&lt;/a&gt; [Form][WebProfiler] Empty form names fix (kix)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12137"&gt;#12137&lt;/a&gt; [FrameworkBundle] cache:clear command fills .php.meta files with wrong data (Strate)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12525"&gt;#12525&lt;/a&gt; [Bundle][FrameworkBundle] be smarter when guessing the document root (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12296"&gt;#12296&lt;/a&gt; [SecurityBundle] Authentication entry point is only registered with firewall exception listener, not with authentication listeners (rjkip)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12446"&gt;#12446&lt;/a&gt; [Twig/DebugBundle] move dump extension registration (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12489"&gt;#12489&lt;/a&gt; [FrameworkBundle] Fix server run in case the router script does not exist (romainneutron)&lt;/li&gt;
+&lt;li&gt;feature &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12404"&gt;#12404&lt;/a&gt; [Form] Remove timezone options from DateType and TimeType (jakzal)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12487"&gt;#12487&lt;/a&gt; [DomCrawler] Added support for 'link' tags in the Link class (StephaneSeng)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12490"&gt;#12490&lt;/a&gt; [FrameworkBundle] Fix server start in case the PHP binary is not found (romainneutron)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12443"&gt;#12443&lt;/a&gt; [HttpKernel] Adding support for invokable controllers in the RequestDataCollector (jameshalsall)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12393"&gt;#12393&lt;/a&gt; [DependencyInjection] inlined factory not referenced (boekkooi)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12411"&gt;#12411&lt;/a&gt; [VarDumper] Use Unicode Control Pictures (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12436"&gt;#12436&lt;/a&gt; [Filesystem] Fixed case for empty folder (yosmanyga)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/YB95Jdedb58" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-6-0-beta2-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Mon, 24 Nov 2014 07:42:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-6-0-beta2-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-6-0-beta2-released</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ A week of symfony #412 (17-&gt;23 November 2014) ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/jI4nS_O7C5U/a-week-of-symfony-412-17-23-november-2014</link>
+            <description>&lt;p&gt;This week, Symfony project focused on tweaking and polishing all its features before the big Symfony 2.6 launch of the next week, including &lt;a href="https://github.com/symfony/symfony-installer"&gt;its shiny new installer&lt;/a&gt;. Meanwhile, preparations continued for the &lt;a href="http://madrid2014.symfony.com/"&gt;SymfonyCon conference&lt;/a&gt;, which will take place in Madrid next week and it will be the biggest event in Symfony's history.&lt;/p&gt;
+
+&lt;h2&gt;Symfony2 development highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.3"&gt;2.3 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/367ed3ce853943fbf81fb64edb6f20eff8d306e6"&gt;367ed3c&lt;/a&gt;:  compared version using PHP_VERSION_ID constant instead of version_compare() function&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/e28f5b8356e020a46e8addec55e311a27b2f8c09"&gt;e28f5b8&lt;/a&gt;: &amp;#91;FrameworkBundle&amp;#93; be smarter when guessing the document root for the server:run command&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/92c8dfb5e667df360e23b70dfcaba653bba6b8f4"&gt;92c8dfb&lt;/a&gt;: &amp;#91;SecurityBundle&amp;#93; authentication entry point is only registered with firewall exception listener, not with authentication listeners&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/76273bf4592ce4cc2bb48a46022801cffe7998cc"&gt;76273bf&lt;/a&gt;: &amp;#91;FrameworkBundle&amp;#93; cache:clear command fills *.php.meta files with wrong data&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/41627138deb1e7ced288d1e2ffff907154690173"&gt;4162713&lt;/a&gt;, &lt;a href="http://github.com/symfony/symfony/commit/3039935997fde8f99258ee8a95fb6fa7fead3f60"&gt;3039935&lt;/a&gt;: &amp;#91;HttpFoundation&amp;#93; made Request::get more performant&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.5"&gt;2.5 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/6e9642a9da5411d90b3f3a51b2f5eb0b27924a97"&gt;6e9642a&lt;/a&gt;: &amp;#91;WebProfilerBundle&amp;#93; fixed the profiler markup when the form has no name&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/symfony/symfony/commits/2.6"&gt;2.6 changelog&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/8cf3d69ce518fdbd5f2fc3290985ea361f6fde5a"&gt;8cf3d69&lt;/a&gt;: &amp;#91;TwigBundle/DebugBundle&amp;#93; moved dump extension &amp;amp; cleanups&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/5526dd79c84205b8d42ad4d5dcdc31a519ec85f8"&gt;5526dd7&lt;/a&gt;: &amp;#91;HttpKernel&amp;#93; fixed parse error in DumpDataCollector&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/8871368ca3b41658103975039918ad42bda88559"&gt;8871368&lt;/a&gt;: &amp;#91;EventDispatcher&amp;#93; extracted an AbstractEventDispatcherTest from EventDispatcherTest and also use it in ContainerAwareEventDispatcherTest&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/2065e00b58c89f1823ce273b8098f3fe679ad2c3"&gt;2065e00&lt;/a&gt;, &lt;a href="http://github.com/symfony/symfony/commit/b3db574a9f197c1e72e2ac2012cc93e3ee45beef"&gt;b3db574&lt;/a&gt;: &amp;#91;TwigBundle&amp;#93; fixed error page preview for custom twig.exception_controller&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://github.com/symfony/symfony/commit/0d20753e0e4d2f8c49465bcb4a56aec7f173e091"&gt;0d20753&lt;/a&gt;: &amp;#91;WebProfilerBundle&amp;#93; added abbrs with type classes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Newest issues and pull requests&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12533"&gt;The Filesystem component cannot rename between different drives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12534"&gt;[DX] integrate database EXPLAIN analyzer in the profiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12512"&gt;Add references from the API doc to the documentation on symfony.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12499"&gt;integer and number do not return correct empty_data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/symfony/symfony/issues/12518"&gt;[Process] Controlling an interactive process&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;They talked about us&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://dunglas.fr/2014/11/continuous-integration-for-symfony-apps-the-modern-stack-quality-checks-private-composer-headless-browser-testing/"&gt;Continuous Integration for Symfony apps, the modern stack: quality checks, private Composer, headless browser testing...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tech.m6web.fr/symfony-expression-language.html"&gt;Configuration dynamique avec Symfony ExpressionLanguage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cullenwebservices.com/love-wordpress-just-wont-hello-symfony/"&gt;I Love WordPress but it Just Won’t Do it All. Hello Again Symfony.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://lrotherfield.com/blog/symfony2-get-twig-environment-twig-extension/"&gt;Symfony2:  Get the templating service in a twig extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bayne.github.io/post/symfony-postgres-heroku/"&gt;Deploying a Symfony2 app using Doctrine and PostgreSQL to Heroku&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.elcodi.io/blog/2014/11/17/a-week-of-elcodi-number-3/"&gt;A Week of Elcodi #3 (10/11 - 17/11)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://symfony.es/noticias/2014/11/16/mas-novedades-sobre-symfonycon-madrid-2014/"&gt;Más novedades sobre SymfonyCon Madrid 2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bayne.github.io/post/faster-functional-tests/"&gt;Faster Functional Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.trisoft.ro/blog/9-enhanced-symfony2-autoloader"&gt;Enhanced Symfony2 autoloader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.elcodi.io/blog/2014/11/18/the-routing-component/"&gt;The Routing Component&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.symfony.gr.jp/symfony2/reference/forms/types.html"&gt;Form Type リファレンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.wanadev.fr/kit-survie-les-bonnes-pratiques-symfony/"&gt;Kit de survie : Les bonnes pratiques Symfony&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jocoomadao.logdown.com/posts/243378-symfony-best-practice-note-2"&gt;Symfony Best Practice 筆記2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ewanvalentine.io/lightening-fast-symfony2-applications-with-just-a-few-tweaks/"&gt;Lightning fast Symfony2 with some simple caching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.techtonet.com/symfony-create-a-soap-server-with-zend-soap/"&gt;Symfony – Create a Soap server with Zend Soap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.elcodi.io/blog/2014/11/19/security-component/"&gt;The Security Component&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://mon-beulogue.com/2014/11/19/symfony-internationalisation-des-dates-pour-twig/"&gt;Symfony – Internationalisation des dates pour Twig&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://segmentfault.com/blog/minowu/1190000000432397"&gt;快速创建Symfony项目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.a-way-out.net/blog/2014/11/23/symfony-tutorial-video/"&gt;Symfony 2.3.3のチュートリアル動画（英語)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/oubakiou/items/12f2d1ef289b6d38d451"&gt;Symfony2のWebTestCaseでカジュアルにリンクチェックをする&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.elcodi.io/blog/2014/11/21/console-component/"&gt;The Console Component&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/jI4nS_O7C5U" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/a-week-of-symfony-412-17-23-november-2014</guid>
+            <dc:creator><![CDATA[ Javier Eguiluz ]]></dc:creator>
+            <pubDate>Sun, 23 Nov 2014 13:14:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/a-week-of-symfony-412-17-23-november-2014#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/a-week-of-symfony-412-17-23-november-2014</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Symfony 2.5.7 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/M97lUOBxnhs/symfony-2-5-7-released</link>
+            <description>&lt;p&gt;Symfony 2.5.7 has just been released. Here is a list of the most important
+changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12525"&gt;#12525&lt;/a&gt; [Bundle][FrameworkBundle] be smarter when guessing the document root (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12296"&gt;#12296&lt;/a&gt; [SecurityBundle] Authentication entry point is only registered with firewall exception listener, not with authentication listeners (rjkip)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12489"&gt;#12489&lt;/a&gt; [FrameworkBundle] Fix server run in case the router script does not exist (romainneutron)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12443"&gt;#12443&lt;/a&gt; [HttpKernel] Adding support for invokable controllers in the RequestDataCollector (jameshalsall)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12393"&gt;#12393&lt;/a&gt; [DependencyInjection] inlined factory not referenced (boekkooi)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12436"&gt;#12436&lt;/a&gt; [Filesystem] Fixed case for empty folder (yosmanyga)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12397"&gt;#12397&lt;/a&gt; [Routing] fix BC (nicolas-grekas)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12382"&gt;#12382&lt;/a&gt; [Routing] removed errors from git (HeinZawHtet)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12370"&gt;#12370&lt;/a&gt; [Yaml] improve error message for multiple documents (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12170"&gt;#12170&lt;/a&gt; [Form] fix form handling with OPTIONS request method (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12235"&gt;#12235&lt;/a&gt; [Validator] Fixed Regex::getHtmlPattern() to work with complex and negated patterns (webmozart)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12326"&gt;#12326&lt;/a&gt; [Session] remove invalid hack in session regenerate (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12341"&gt;#12341&lt;/a&gt; [Kernel] ensure session is saved before sending response (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12329"&gt;#12329&lt;/a&gt; [Routing] serialize the compiled route to speed things up (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12291"&gt;#12291&lt;/a&gt; [Form] Fixed usage of &amp;quot;name&amp;quot; variable in form_start block (webmozart)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12316"&gt;#12316&lt;/a&gt; Break infinite loop while resolving aliases (chx)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12313"&gt;#12313&lt;/a&gt; [Security][listener] change priority of switchuser (aitboudad)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/M97lUOBxnhs" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-5-7-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Thu, 20 Nov 2014 16:28:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-5-7-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-5-7-released</feedburner:origLink></item>
+                <item>
+            <title><![CDATA[ Symfony 2.3.22 released ]]></title>
+            <link>http://feedproxy.google.com/~r/symfony/blog/~3/0hR3v2TXxs4/symfony-2-3-22-released</link>
+            <description>&lt;p&gt;Symfony 2.3.22 has just been released. Here is a list of the most important
+changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12525"&gt;#12525&lt;/a&gt; [Bundle][FrameworkBundle] be smarter when guessing the document root (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12296"&gt;#12296&lt;/a&gt; [SecurityBundle] Authentication entry point is only registered with firewall exception listener, not with authentication listeners (rjkip)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12393"&gt;#12393&lt;/a&gt; [DependencyInjection] inlined factory not referenced (boekkooi)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12436"&gt;#12436&lt;/a&gt; [Filesystem] Fixed case for empty folder (yosmanyga)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12370"&gt;#12370&lt;/a&gt; [Yaml] improve error message for multiple documents (xabbuh)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12170"&gt;#12170&lt;/a&gt; [Form] fix form handling with OPTIONS request method (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12235"&gt;#12235&lt;/a&gt; [Validator] Fixed Regex::getHtmlPattern() to work with complex and negated patterns (webmozart)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12326"&gt;#12326&lt;/a&gt; [Session] remove invalid hack in session regenerate (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12341"&gt;#12341&lt;/a&gt; [Kernel] ensure session is saved before sending response (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12329"&gt;#12329&lt;/a&gt; [Routing] serialize the compiled route to speed things up (Tobion)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12316"&gt;#12316&lt;/a&gt; Break infinite loop while resolving aliases (chx)&lt;/li&gt;
+&lt;li&gt;bug &lt;a class="reference external" href="https://github.com/symfony/symfony/issues/12313"&gt;#12313&lt;/a&gt; [Security][listener] change priority of switchuser (aitboudad)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to check the integrity of this new version? Read my blog post about
+&lt;a class="reference external" href="http://fabien.potencier.org/article/73/signing-project-releases"&gt;signing releases&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Want to be notified whenever a new Symfony release is published? Or when a
+version is not maintained anymore? Or only when a security issue is fixed?
+Consider &lt;a class="reference external" href="http://symfony.com/roadmap"&gt;subscribing to the Symfony Roadmap Notifications&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;hr style="margin-bottom: 5px" /&gt;
+                &lt;div style="font-size: 90%"&gt;
+                Be trained by &lt;a href="http://trainings.sensiolabs.com/"&gt;Symfony experts&lt;/a&gt;
+                                - &lt;a href="http://training.sensiolabs.com/en/training/courses?search_training%5Blevel%5D%5B0%5D=improvement&amp;amp;search_training%5Bduration%5D=2&amp;amp;search_training%5BavailableLanguages%5D%5B0%5D=fr&amp;amp;search_training%5BavailableLanguages%5D%5B1%5D=en&amp;amp;search_training%5BavailableLanguages%5D%5B2%5D=de&amp;amp;search_training%5Bkeywords%5D=Hacker+et+%C3%A9tendre+Symfony2&amp;amp;search_training%5Bfrom%5D=12%2F11%2F2014&amp;amp;search_training%5Bto%5D=12%2F12%2F2014"&gt;2014-12-11&lt;/a&gt; Clichy
+                                &lt;/div&gt;&lt;img src="//feeds.feedburner.com/~r/symfony/blog/~4/0hR3v2TXxs4" height="1" width="1" alt=""/&gt;</description>
+            <guid isPermaLink="false">http://symfony.com/blog/symfony-2-3-22-released</guid>
+            <dc:creator><![CDATA[ Fabien Potencier ]]></dc:creator>
+            <pubDate>Thu, 20 Nov 2014 15:42:00 +0000</pubDate>
+            <comments>http://symfony.com/blog/symfony-2-3-22-released#comments-list</comments>
+        <feedburner:origLink>http://symfony.com/blog/symfony-2-3-22-released</feedburner:origLink></item>
+            </channel>
+</rss>
