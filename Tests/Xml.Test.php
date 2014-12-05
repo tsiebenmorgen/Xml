@@ -10,14 +10,102 @@ use de\webomotion\Xml;
  * @author Thomas Siebenmorgen <tsiebenmorgen@webomotion.de>
  */
 class XmlTest extends PHPUnit_Framework_TestCase {
+  protected $gpxFile;
   protected $kmlFile;
+  protected $rssFile;
+  protected $xmlFile;
 
   protected function setUp() {
-    $srcDir        = dirname(__FILE__) . '/src';
-    $this->gpxFile = $srcDir . '/camino-part-1.gpx';
-    $this->kmlFile = $srcDir . '/camino-part-1.kml';
-    $this->rssFile = $srcDir . '/symfony.rss';
-    $this->xmlFile = $srcDir . '/container.xml';
+    $srcDir            = dirname(__FILE__) . '/src';
+    $this->gpxFile     = $srcDir . '/camino-part-1.gpx';
+    $this->kmlFile     = $srcDir . '/camino-part-1.kml';
+    $this->kmlFileNoNs = $srcDir . '/camino-part-1-no-ns.kml';
+    $this->rssFile     = $srcDir . '/symfony.rss';
+    $this->xmlFile     = $srcDir . '/container.xml';
+  }
+
+  public function testGetAllNoNamespacesForceNode() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $arr  = $xml->getAll('//Placemark[@id="t1362392_p1"]/name/text()', true);
+
+    $this->assertEquals(1, count($arr));
+    $this->assertInstanceOf('\DOMText', $arr[0]);
+  }
+
+  public function testGetNoNamespacesNull() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $v   = $xml->get('//Placemark[@id="t1362392_p1"]/namex');
+
+    $this->assertEquals(null, $v);
+  }
+
+  public function testGetAllNoNamespacesAbsoluteOneElement() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $arr = $xml->getAll('//Placemark[@id="t1362392_p1"]/name');
+
+    $this->assertEquals(1, count($arr));
+    $this->assertEquals('name', $arr[0]->tagName);
+    $this->assertInstanceOf('\DOMElement', $arr[0]);
+  }
+
+  public function testGetAllNoNamespacesRelativeOneAttribute() {
+    $xml  = new Xml($this->kmlFileNoNs);
+    $elem = $xml->get('//Placemark[@id="t1362392_p1"]/ExtendedData');
+
+    $xml->context = $elem;
+
+    $elem = $xml->get('./Data[1]/attribute::name');
+    $this->assertEquals('poiIndex', $elem);
+  }
+
+  public function testGetAllNoNamespacesRelativeMultiTexts() {
+    $xml  = new Xml($this->kmlFileNoNs);
+    $xml->context = $xml->get('//Placemark[@id="t1362392_p1"]/ExtendedData');
+
+    $arr = $xml->get('./Data/value/text()');
+    $this->assertEquals(10, count($arr));
+    $this->assertEquals('#t1362392_p2', $arr[3]);
+  }
+
+  /**
+   * @expectedException        Exception
+   * @expectedExceptionMessage Xml::$context: Kein gültiger Pfad!
+   */
+  public function testSetContextNodeByInvalidXPath() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $xml->context = '//Placemark[@id="t1362392_pXXX"]';
+  }
+
+  public function testSetContextNodeByXPath() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $xml->context = '//Placemark[@id="t1362392_p1"]';
+    $arr = $xml->getAll('./ExtendedData/Data');
+
+    $this->assertEquals(10, count($arr));
+    $this->assertInstanceOf('\DOMElement', $arr[0]);
+  }
+
+  public function testGetAllNoNamespacesNull() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $arr = $xml->getAll('//Placemark[@id="t136ssd2392_p1"]/name/text()');
+
+    $this->assertEquals(0, count($arr));
+  }
+
+  public function testGetAllNoNamespacesAbsoluteOneText() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $arr = $xml->getAll('//Placemark[@id="t1362392_p1"]/name/text()');
+
+    $this->assertEquals(1, count($arr));
+    $this->assertEquals('Spanisches Tor in Saint-Jean-Pied-de-Port', $arr[0]);
+  }
+
+  public function testGetAllNoNamespacesAbsoluteMultiAttributes() {
+    $xml = new Xml($this->kmlFileNoNs);
+    $arr = $xml->getAll('//Placemark[@id="t1362392_p1"]/ExtendedData/Data/attribute::name');
+
+    $this->assertEquals(10, count($arr));
+    $this->assertEquals('typeText', $arr[4]);
   }
 
   public function testGetSetFormatOutput() {
@@ -38,6 +126,21 @@ class XmlTest extends PHPUnit_Framework_TestCase {
 
   }
 
+  public function testGetUndefinedProperty() {
+    $xml = new Xml($this->kmlFile);
+    $v = $xml->foo;
+    $this->assertEquals($v, null);
+  }
+
+  /**
+   * @expectedException        Exception
+   * @expectedExceptionMessage Xml::$foo: unbekannte Eigenschaft!
+   */
+  public function testSetUndefinedProperty() {
+    $xml = new Xml($this->kmlFile);
+    $xml->foo = 'bar';
+  }
+
   public function testGetDoc() {
     $doc = new DOMDocument();
     $doc->load($this->kmlFile);
@@ -52,16 +155,6 @@ class XmlTest extends PHPUnit_Framework_TestCase {
 
     $this->assertEquals($xml->context, null);
 
-  }
-
-  /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::$context: Kein gültiger Kontext!
-   */
-  public function testSetInvalidContext() {
-    $xml = new Xml($this->kmlFile);
-
-    $xml->context = 'foo';
   }
 
   public function testGetSetContextNode() {
@@ -181,5 +274,25 @@ class XmlTest extends PHPUnit_Framework_TestCase {
    */
   public function testCreateInvalidFilePath() {
     $xml = new Xml($this->kmlFile . 'x');
+  }
+
+  /**
+   * @expectedException        Exception
+   * @expectedExceptionMessage Xml::$context: Kein gültiger Pfad!
+   */
+  public function testSetInvalidContextPath() {
+    $xml = new Xml($this->kmlFile);
+
+    $xml->context = 'foo';
+  }
+
+  /**
+   * @expectedException        Exception
+   * @expectedExceptionMessage Xml::$context: Kein gültiger Kontext!
+   */
+  public function testSetInvalidContext() {
+    $xml = new Xml($this->kmlFile);
+
+    $xml->context = array();
   }
 }
