@@ -18,7 +18,6 @@ use \DOMElement;
 use \DOMNameSpaceNode;
 use \DOMNode;
 use \DOMText;
-use \DOMXPath;
 use \Exception;
 
 /**
@@ -47,24 +46,20 @@ class Xml {
   private $_DOMDocument = null;
 
   /**
-   * @var DOMXPath|null
-   * DOMXPath, mit dem die Fassade arbeitet.
-   */
-  private $_DOMXPath    = null;
-
-  /**
    * @var callback|null
    * Funktion, zur Behandlung von Namespaces. Bisher wird der Namespace
    * entfernt, damit XPath-Queries ohne Namespace funktionieren.
    */
   private $_NS_Fn       = null;
 
-  const ERR_CONTEXT_NOT_VALID = 'Xml::$context: Kein gültiger Kontext!';
-  const ERR_FILE_NOT_EXIST    = 'Xml::__construct: Parameter #1 ist kein gültiger Dateipfad!';
-  const ERR_INVALID_PARAM     = 'Xml::__construct: ungültiger Typ für Parameter #1';
-  const ERR_INVALID_NS_FN     = 'Ungültige Funktion als NamespaceHandler angegeben!';
-  const ERR_ITEM_NOT_ATTR     = 'Das Element ist kein Attribut!';
-  const ERR_ITEM_NOT_TEXT     = 'Das Element ist kein Text!';
+  const ERR_CONTEXT_PATH_NOT_VALID = 'Xml::$context: Kein gültiger Pfad!';
+  const ERR_CONTEXT_NOT_VALID      = 'Xml::$context: Kein gültiger Kontext!';
+  const ERR_FILE_NOT_EXIST         = 'Xml::__construct: Parameter #1 ist kein gültiger Dateipfad!';
+  const ERR_INVALID_PARAM          = 'Xml::__construct: ungültiger Typ für Parameter #1';
+  const ERR_INVALID_NS_FN          = 'Ungültige Funktion als NamespaceHandler angegeben!';
+  const ERR_NODE_NOT_ATTR          = 'Der Node ist kein Attribut!';
+  const ERR_NODE_NOT_TEXT          = 'Der Node ist kein Text!';
+  const ERR_UNDEFINED_PROPERTY     = 'Xml::$%s: unbekannte Eigenschaft!';
 
   /**
    * Erzeugt ein XML-Objekt aus einem XML-Code, einem Dateipfad, einem
@@ -76,8 +71,6 @@ class Xml {
    */
   public function __construct($p = null) {
     $this->_saveDOMDocument($p);
-
-    $this->_DOMXPath = new DOMXPath($this->_DOMDocument);
   }
 
   /**
@@ -117,7 +110,7 @@ class Xml {
         $this->_setContextNode($value);
         break;
       default:
-        return null;
+        throw new Exception(sprintf(self::ERR_UNDEFINED_PROPERTY, $name));
     }
   }
 
@@ -144,7 +137,17 @@ class Xml {
    * @return  mixed
    * Wert, auf die sich der übergebene XPath bezieht.
    */
-  public function get($xpath, $forceNode = false) {}
+  public function get($xpath, $forceNode = false) {
+    $arr = $this->getAll($xpath, $forceNode);
+
+    if (count($arr) == 0) {
+      return null;
+    } elseif (count($arr) == 1) {
+      return $arr[0];
+    } else {
+      return $arr;
+    }
+  }
 
   /**
    * Gibt die Ergebnisse der übergebenen XPath-Query zwingend als Array
@@ -162,7 +165,21 @@ class Xml {
    * Array mit den Werten, auf die sich der übergebene XPath bezieht.
    *
    */
-  public function getAll($xpath, $forceNode = false) {}
+  public function getAll($xpath, $forceNode = false) {
+    $xpath      = new XPath($this, $xpath);
+    $arrResult  = array();
+    $NodeList   = $this->_getNodeListByXPath($xpath);
+    if ($NodeList->length > 0) {
+      foreach ($NodeList as $node) {
+        if ($forceNode) {
+          $arrResult[] = $node;
+        } else {
+          $arrResult[] = $this->_getResultByXPath($node, $xpath);
+        }
+      }
+    }
+    return $arrResult;
+  }
 
   /**
    * Erzeugt aus dem übergebenen Dateipfad zu einer XML-Datei ein
@@ -206,7 +223,10 @@ class Xml {
    * @param   XPath    $xpath   XPath-Objekt zu den gewünschten Nodes.
    * @return  NodeList          NodeList, die zum übergebenen XPath passt.
    */
-  private function _getNodeListByXPath(XPath $xpath) {}
+  private function _getNodeListByXPath(XPath $xpath) {
+    $DocumentElement = $this->_DOMDocument->documentElement;
+    return $xpath->execute();
+  }
 
   /**
    * Gibt je nach übergebenen XPath die übergebene Node, den
@@ -219,7 +239,24 @@ class Xml {
    * @return  string|DOMNode        Wert des Attributes oder des Contents
    *                                als String oder die DOMNode.
    */
-  private function _getResultByXPath(DOMNode $DOMNode, XPath $xpath) {}
+  private function _getResultByXPath(DOMNode $DOMNode, XPath $xpath) {
+    switch(true) {
+      case $xpath->isAttribute:
+        if ($DOMNode instanceof DOMAttr) {
+          return $DOMNode->value;
+        } else {
+          throw new Exception(self::ERR_NODE_NOT_ATTR);
+        }
+      case $xpath->isText:
+        if ($DOMNode instanceof DOMText) {
+          return $DOMNode->wholeText;
+        } else {
+          throw new Exception(self::ERR_NODE_NOT_TEXT);
+        }
+      default:
+        return $DOMNode;
+    }
+  }
 
   /**
    * Speichert die übergebene Funktion zum Umgang mit Namespaces.
@@ -267,6 +304,13 @@ class Xml {
       $this->_ContextNode = null;
     } elseif ($ContextNode instanceof DOMNode) {
       $this->_ContextNode = $ContextNode;
+    } elseif (is_string($ContextNode)) {
+      $node = $this->get($ContextNode);
+      if (!($node instanceof DOMNode)) {
+        throw new Exception(self::ERR_CONTEXT_PATH_NOT_VALID);
+      } else {
+        $this->_ContextNode = $node;
+      }
     } else {
       throw new Exception(self::ERR_CONTEXT_NOT_VALID);
     }
