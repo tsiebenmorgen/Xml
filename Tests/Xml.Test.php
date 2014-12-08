@@ -68,8 +68,7 @@ class XmlTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::$context: Kein gültiger Pfad!
+   * @expectedException        de\webomotion\InvalidXPathException
    */
   public function testSetContextNodeByInvalidXPath() {
     $xml = new Xml($this->kmlFileNoNs);
@@ -126,15 +125,16 @@ class XmlTest extends PHPUnit_Framework_TestCase {
 
   }
 
+  /**
+   * @expectedException        de\webomotion\UndefinedPropertyException
+   */
   public function testGetUndefinedProperty() {
     $xml = new Xml($this->kmlFile);
     $v = $xml->foo;
-    $this->assertEquals($v, null);
   }
 
   /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::$foo: unbekannte Eigenschaft!
+   * @expectedException        de\webomotion\UndefinedPropertyException
    */
   public function testSetUndefinedProperty() {
     $xml = new Xml($this->kmlFile);
@@ -261,24 +261,21 @@ class XmlTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::__construct: ungültiger Typ für Parameter #1
+   * @expectedException        de\webomotion\InvalidArgumentException
    */
   public function testCreateErrorInteger() {
     $xml = new Xml(1);
   }
 
   /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::__construct: Parameter #1 ist kein gültiger Dateipfad!
+   * @expectedException        de\webomotion\FileNotFoundException
    */
   public function testCreateInvalidFilePath() {
     $xml = new Xml($this->kmlFile . 'x');
   }
 
   /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::$context: Kein gültiger Pfad!
+   * @expectedException        de\webomotion\InvalidXPathException
    */
   public function testSetInvalidContextPath() {
     $xml = new Xml($this->kmlFile);
@@ -287,8 +284,7 @@ class XmlTest extends PHPUnit_Framework_TestCase {
   }
 
   /**
-   * @expectedException        Exception
-   * @expectedExceptionMessage Xml::$context: Kein gültiger Kontext!
+   * @expectedException        de\webomotion\InvalidArgumentException
    */
   public function testSetInvalidContext() {
     $xml = new Xml($this->kmlFile);
