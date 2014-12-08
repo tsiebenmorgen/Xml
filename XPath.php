@@ -1,13 +1,8 @@
 <?php namespace de\webomotion;
 
-use \DOMAttr;
-use \DOMDocument;
-use \DOMElement;
-use \DOMNameSpaceNode;
-use \DOMNode;
-use \DOMText;
+require_once dirname(__FILE__) . '/Exceptions/UndefinedPropertyException.php';
+
 use \DOMXPath;
-use \Exception;
 
 class XPath {
   const QUERY_IS_ATTRIBUTE = '/^attribute\:\:([a-zA-Z]+)$/';
@@ -38,6 +33,8 @@ class XPath {
         return (bool) preg_match(self::QUERY_IS_TEXT, $this->basename);
       case 'isRelative':
         return (bool) preg_match(self::QUERY_IS_RELATIVE, $this->dirname);
+      case default:
+        throw new UndefinedPropertyException($name);
     }
   }
 

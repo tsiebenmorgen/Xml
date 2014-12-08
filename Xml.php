@@ -10,15 +10,18 @@
 
 namespace de\webomotion;
 
-require_once dirname(__FILE__) . '/XPath.php';
+$d = dirname(__FILE__);
 
-use \DOMAttr;
+require_once $d . '/XPath.php';
+require_once $d . '/Exceptions/FileNotFoundException.php';
+require_once $d . '/Exceptions/InvalidArgumentException.php';
+require_once $d . '/Exceptions/InvalidXPathException.php';
+require_once $d . '/Exceptions/UndefinedPropertyException.php';
+
 use \DOMDocument;
 use \DOMElement;
 use \DOMNameSpaceNode;
 use \DOMNode;
-use \DOMText;
-use \Exception;
 
 /**
  * Eine Fassade für die DOM-Erweiterung von PHP, die eine vereinfachte
@@ -52,15 +55,6 @@ class Xml {
    */
   private $_NS_Fn       = null;
 
-  const ERR_CONTEXT_PATH_NOT_VALID = 'Xml::$context: Kein gültiger Pfad!';
-  const ERR_CONTEXT_NOT_VALID      = 'Xml::$context: Kein gültiger Kontext!';
-  const ERR_FILE_NOT_EXIST         = 'Xml::__construct: Parameter #1 ist kein gültiger Dateipfad!';
-  const ERR_INVALID_PARAM          = 'Xml::__construct: ungültiger Typ für Parameter #1';
-  const ERR_INVALID_NS_FN          = 'Ungültige Funktion als NamespaceHandler angegeben!';
-  const ERR_NODE_NOT_ATTR          = 'Der Node ist kein Attribut!';
-  const ERR_NODE_NOT_TEXT          = 'Der Node ist kein Text!';
-  const ERR_UNDEFINED_PROPERTY     = 'Xml::$%s: unbekannte Eigenschaft!';
-
   /**
    * Erzeugt ein XML-Objekt aus einem XML-Code, einem Dateipfad, einem
    * DOMDocument oder aus einem DOMElement.
@@ -91,7 +85,7 @@ class Xml {
         return $this->_DOMDocument->preserveWhiteSpace;
         break;
       default:
-        return null;
+        throw new UndefinedPropertyException($name);
     }
   }
 
@@ -110,7 +104,7 @@ class Xml {
         $this->_setContextNode($value);
         break;
       default:
-        throw new Exception(sprintf(self::ERR_UNDEFINED_PROPERTY, $name));
+        throw new UndefinedPropertyException($name);
     }
   }
 
@@ -190,7 +184,7 @@ class Xml {
    */
   private function _createDOMDocumentFromFile($strFile) {
     if (!is_file((string) $strFile)) {
-      throw new Exception(self::ERR_FILE_NOT_EXIST);
+      throw new FileNotFoundException($strFile);
     }
     $DOMDocument = new DOMDocument('1.0', 'UTF-8');
     $DOMDocument->load($strFile);
@@ -242,17 +236,9 @@ class Xml {
   private function _getResultByXPath(DOMNode $DOMNode, XPath $xpath) {
     switch(true) {
       case $xpath->isAttribute:
-        if ($DOMNode instanceof DOMAttr) {
-          return $DOMNode->value;
-        } else {
-          throw new Exception(self::ERR_NODE_NOT_ATTR);
-        }
+        return $DOMNode->value;
       case $xpath->isText:
-        if ($DOMNode instanceof DOMText) {
-          return $DOMNode->wholeText;
-        } else {
-          throw new Exception(self::ERR_NODE_NOT_TEXT);
-        }
+        return $DOMNode->wholeText;
       default:
         return $DOMNode;
     }
@@ -269,6 +255,9 @@ class Xml {
   /**
    * Erstellt und speichert je nach übergebenen Parameter
    * das DOMDocument ab.
+   *
+   * @throws InvalidArgumentException
+   * If $p is not xml string, filepat string, DOMElement, DOMDocument or null.
    *
    * @param string|DOMDocument|DOMElement   $p
    * DOMDocument, DOMElement, ein Pfad zu einer XML-Datei oder ein
@@ -289,12 +278,22 @@ class Xml {
     } elseif (is_null($p)) {
       $this->_DOMDocument = new DOMDocument('1.0', 'UTF-8');
     } else {
-      throw new Exception(self::ERR_INVALID_PARAM);
+      throw new InvalidArgumentException($p, array(
+        'XML string', 'filepath string',
+        'DOMElement', 'DOMDocument', 'null'
+      ));
     }
   }
 
   /**
    * Speichert den DOMNode, auf den sich relative XPath beziehen sollen.
+   *
+   * @throws InvalidXPathException
+   * If $ContextNode is a xpath query, which is malformed or not
+   * matching any element.
+   *
+   * @throws InvalidArgumentException
+   * If $ContextNode is not null, false, XPath or DOMNode.
    *
    * @param   null|false|XPath|DOMNode  $ContextNode
    * @return  void
@@ -307,12 +306,14 @@ class Xml {
     } elseif (is_string($ContextNode)) {
       $node = $this->get($ContextNode);
       if (!($node instanceof DOMNode)) {
-        throw new Exception(self::ERR_CONTEXT_PATH_NOT_VALID);
+        throw new InvalidXPathException($ContextNode);
       } else {
         $this->_ContextNode = $node;
       }
     } else {
-      throw new Exception(self::ERR_CONTEXT_NOT_VALID);
+      throw new InvalidArgumentException($ContextNode, array(
+        'null', 'false', 'XPath', 'DOMNode'
+      ));
     }
   }
 }
