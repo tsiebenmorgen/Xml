@@ -70,4 +70,3 @@ __HINWEISE:__
 TODO:
 =====
 * DOM modifizieren
-* Umgang mit namespaces
