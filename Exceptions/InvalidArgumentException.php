@@ -10,8 +10,6 @@ require_once dirname(__FILE__) . '/Exception.php';
  * Typ als den erwarteten hat.
  */
 class InvalidArgumentException extends Exception {
-  const MSG = '%s::%s: invalid type of argument #%d. Allowed types are %s. %s given.';
-
   public function __construct($v, array $types = null) {
     $msg              = '';
     $className        = $this->getClassName();
