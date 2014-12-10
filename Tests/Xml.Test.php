@@ -24,6 +24,13 @@ class XmlTest extends PHPUnit_Framework_TestCase {
     $this->xmlFile     = $srcDir . '/container.xml';
   }
 
+  /**
+   * @expectedException        de\webomotion\InvalidNamespaceHandlerException
+   */
+  public function testSetInvalidNamespaceHandler() {
+    new Xml($this->kmlFile, 'test');
+  }
+  
   public function testGetAllNoNamespacesForceNode() {
     $xml = new Xml($this->kmlFileNoNs);
     $arr  = $xml->getAll('//Placemark[@id="t1362392_p1"]/name/text()', true);
