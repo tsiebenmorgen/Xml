@@ -11,8 +11,9 @@ use de\webomotion\XPath;
  */
 class XPathTest extends PHPUnit_Framework_TestCase {
   private $absoluteAttributeQuery = '/kml/attribute::xmlns';
+  private $relativeAttributeQuery = './attribute::xmlns';
   private $relativeTextQuery      = './text()';
-
+  
   public function testToString() {
     $xpath = new XPath($this->absoluteAttributeQuery);
 
@@ -71,6 +72,21 @@ class XPathTest extends PHPUnit_Framework_TestCase {
     $xpath = new XPath($this->absoluteAttributeQuery);
 
     $this->assertEquals($xpath->isAbsolute, true);
+  }
+
+  public function testGetIsAbsolute2() {
+    $xpath = new XPath($this->relativeAttributeQuery);
+
+    $this->assertEquals($xpath->isAbsolute, false);
+  }
+
+  /**
+   * @exception deßwebootion\UndefinedPropertyException
+   */
+  public function testGetUndefinedProperty() {
+    $xpath = new XPath($this->relativeAttributeQuery);
+
+    $xpath->isFoo;
   }
 
   public function testGetIsRelativeFalse() {
