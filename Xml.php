@@ -15,6 +15,7 @@ $d = dirname(__FILE__);
 require_once $d . '/XPath.php';
 require_once $d . '/Exceptions/FileNotFoundException.php';
 require_once $d . '/Exceptions/InvalidArgumentException.php';
+require_once $d . '/Exceptions/InvalidNamespaceHandlerException.php';
 require_once $d . '/Exceptions/InvalidXPathException.php';
 require_once $d . '/Exceptions/UndefinedPropertyException.php';
 
@@ -53,7 +54,7 @@ class Xml {
    * Funktion, zur Behandlung von Namespaces. Bisher wird der Namespace
    * entfernt, damit XPath-Queries ohne Namespace funktionieren.
    */
-  private $_NS_Fn       = null;
+  private $_NsFn       = null;
 
   /**
    * Erzeugt ein XML-Objekt aus einem XML-Code, einem Dateipfad, einem
@@ -63,8 +64,15 @@ class Xml {
    * DOMDocument, DOMElement, ein Pfad zu einer XML-Datei oder ein
    * XML-String, auf den sich die Fassade bezieht.
    */
-  public function __construct($p = null) {
+  public function __construct($p = NULL, $fn = NULL) {
     $this->_saveDOMDocument($p);
+    
+    if (is_null($fn)) {
+        $fn = array($this, '_defaultNameSpaceHandlerFuntion');
+    }
+
+    $this->_registerNameSpaceHandlerFunction($fn);
+    $this->_executeNameSpaceHandlerFunction();
   }
 
   /**
@@ -74,16 +82,12 @@ class Xml {
     switch ($name) {
       case 'context':
         return $this->_ContextNode;
-        break;
       case 'doc':
         return $this->_DOMDocument;
-        break;
       case 'formatOutput':
         return $this->_DOMDocument->formatOutput;
-        break;
       case 'preserveWhiteSpace':
         return $this->_DOMDocument->preserveWhiteSpace;
-        break;
       default:
         throw new UndefinedPropertyException($name);
     }
@@ -149,7 +153,7 @@ class Xml {
    *
    * @link https://github.com/tsiebenmorgen/Xml README on github
    *
-   * @param   string     $xpath
+   * @param   string     $query
    * XPath zum Node des gesuchten Werts im XML-Code.
    *
    * @param   boolean   $forceNode
@@ -159,8 +163,8 @@ class Xml {
    * Array mit den Werten, auf die sich der übergebene XPath bezieht.
    *
    */
-  public function getAll($xpath, $forceNode = false) {
-    $xpath      = new XPath($this, $xpath);
+  public function getAll($query, $forceNode = false) {
+    $xpath      = new XPath($this, $query);
     $arrResult  = array();
     $NodeList   = $this->_getNodeListByXPath($xpath);
     if ($NodeList->length > 0) {
@@ -193,21 +197,34 @@ class Xml {
 
   /**
    * Diese default Funktion zum Umgang mit Namespaces entfernt die
-   * Namespaces aus dem DOMDocument, so dass XPath-Angaben ohne
+   * Namespaces aus dem DOMDocument, so dass XPath-Queries ohne
    * Namespaces erfolgen können.
    *
    * @param   DOMDocument   $DOMDocument    DOMDocument, auf welches
    *                                        sich das XML-Objekt bezieht.
    * @return  void
    */
-  private function _defaultNameSpaceHandlerFuntion(DOMDocument $DOMDocument) {}
+  private function _defaultNameSpaceHandlerFuntion(DOMDocument $DOMDocument) { 
+    if ($DOMDocument->documentElement instanceof DOMElement) {
+      $DocumentElement  = $DOMDocument->documentElement;
+      $DOMNameSpaceNode = $DocumentElement->getAttributeNode('xmlns');
+
+      if ($DOMNameSpaceNode instanceof DOMNameSpaceNode) {
+        $namespace = $DOMNameSpaceNode->nodeValue;
+        $DocumentElement->removeAttributeNS($namespace, '');
+        $DOMDocument->loadXML($DOMDocument->saveXML($DOMDocument));
+      }
+    }
+  }
 
   /**
    * Führt die gespeicherte Funktion zum Umgang mit Namespaces aus.
    *
    * @return  void
    */
-  private function _executeNameSpaceHandlerFunction() {}
+  private function _executeNameSpaceHandlerFunction() {
+    call_user_func_array($this->_NsFn, array($this->_DOMDocument));
+  }
 
   /**
    * Gibt ein NodeList-Objekt aller Nodes zurück, auf die der übergebene
@@ -218,7 +235,6 @@ class Xml {
    * @return  NodeList          NodeList, die zum übergebenen XPath passt.
    */
   private function _getNodeListByXPath(XPath $xpath) {
-    $DocumentElement = $this->_DOMDocument->documentElement;
     return $xpath->execute();
   }
 
@@ -250,7 +266,13 @@ class Xml {
    * @param   callable  $fn         Funktion zum Umgang mit Namespaces
    * @return  void
    */
-  private function _registerNameSpaceHandlerFunction($fn) {}
+  private function _registerNameSpaceHandlerFunction($fn) {
+    if (is_callable($fn)) {
+      $this->_NsFn = $fn;
+    } else {
+      throw new InvalidNamespaceHandlerException();
+    }
+  }
 
   /**
    * Erstellt und speichert je nach übergebenen Parameter
