@@ -33,7 +33,7 @@ class XPath {
         return (bool) preg_match(self::QUERY_IS_TEXT, $this->basename);
       case 'isRelative':
         return (bool) preg_match(self::QUERY_IS_RELATIVE, $this->dirname);
-      case default:
+      default:
         throw new UndefinedPropertyException($name);
     }
   }
